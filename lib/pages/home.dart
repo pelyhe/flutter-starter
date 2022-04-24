@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ScaffoldBody(
+      body: scaffoldBody(
         context: context,
         mobileBody: Container(color: Colors.amber),
         tabletBody: Container(color: Colors.black),

@@ -1,18 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:formula/general/fonts.dart';
 
-Widget ScaffoldBody(
+//depending on what kind of screen will your app run, you can just comment the unnecessary lines
+Widget scaffoldBody(
     {required BuildContext context,
     Widget? mobileBody,
     Widget? tabletBody,
     Widget? desktopBody}) {
-  AppFontSize.refresh(context);
+  ScreenSize.refresh(context);
 
-  if (AppFontSize.isMobile) {
-    return mobileBody ?? const SizedBox();
-  } else if (AppFontSize.isTablet) {
-    return tabletBody ?? const SizedBox();
+  if (ScreenSize.isMobile) {
+    return mobileBody!;
+  } else if (ScreenSize.isTablet) {
+    return tabletBody!;
   } else {
-    return desktopBody ?? const SizedBox();
+    return desktopBody!;
   }
 }

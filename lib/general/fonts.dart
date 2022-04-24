@@ -2,22 +2,26 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AppFontSize {
+//If you dont use ScaffoldBody widget you should call refresh in every build
+class ScreenSize {
   ///Sets the width and the height by the [context]
   static void refresh(BuildContext context) {
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
     isMobile = width < 600;
     isTablet = width >= 600 && width < 1025;
-    isComputer = width > 1024;
+    isDesktop = width > 1024;
   }
 
   static double width = 0;
   static double height = 0;
   static bool isMobile = true;
   static bool isTablet = false;
-  static bool isComputer = false;
+  static bool isDesktop = false;
+}
 
+//big, medium, small font size for mobile, tablet, desktop screen
+class AppFontSize {
   static var _bigFontSizes = [50, 45, 35];
   static List<int> get bigFontSizes =>
       _bigFontSizes..sort((a, b) => b.compareTo(a));
@@ -40,27 +44,27 @@ class AppFontSize {
   }
 
   int get big {
-    if (isMobile) {
+    if (ScreenSize.isMobile) {
       return bigFontSizes[2];
-    } else if (isTablet) {
+    } else if (ScreenSize.isTablet) {
       return bigFontSizes[1];
     }
     return bigFontSizes[0];
   }
 
   int get medium {
-    if (isMobile) {
+    if (ScreenSize.isMobile) {
       return mediumFontSizes[2];
-    } else if (isTablet) {
+    } else if (ScreenSize.isTablet) {
       return mediumFontSizes[1];
     }
     return mediumFontSizes[0];
   }
 
   int get small {
-    if (isMobile) {
+    if (ScreenSize.isMobile) {
       return smallFontSizes[2];
-    } else if (isTablet) {
+    } else if (ScreenSize.isTablet) {
       return smallFontSizes[1];
     }
     return smallFontSizes[0];

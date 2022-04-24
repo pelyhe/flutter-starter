@@ -13,7 +13,6 @@ class AppRoutes {
 //
 //    - in the widget where the route goes should be a static String idParameter="<key>"
 //    - get the parameter by Get.parameters[MyPageScreen.idParameter]
-
   static String home = "/";
 
   static final pages = [GetPage(name: home, page: () => HomePage())];
