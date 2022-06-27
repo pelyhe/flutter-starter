@@ -71,8 +71,11 @@ class AppFontSize {
   }
 }
 
-Widget AppText(String text, Color? color, double size, double? spacing,
-    {FontWeight? weight = FontWeight.normal,
+Widget AppText(String text,
+    {Color? color,
+    double fontSize = 15,
+    double? spacing,
+    FontWeight? weight = FontWeight.normal,
     int? maxlines = 1,
     double minFontSize = 10,
     double stepGranularity = 1,
@@ -85,7 +88,7 @@ Widget AppText(String text, Color? color, double size, double? spacing,
             color: color,
             letterSpacing: spacing,
             fontWeight: weight,
-            fontSize: minFontSize),
+            fontSize: fontSize),
     minFontSize: minFontSize,
     stepGranularity: stepGranularity,
     maxLines: maxlines,
