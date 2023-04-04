@@ -1,5 +1,5 @@
-import 'package:formula/pages/home.dart';
 import 'package:get/get.dart';
+import 'package:project/pages/home.dart';
 
 class AppRoutes {
 //route with parameters example:

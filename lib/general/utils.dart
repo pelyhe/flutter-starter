@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:formula/general/fonts.dart';
+import 'package:project/general/fonts.dart';
 
 //depending on what kind of screen will your app run, you can just comment the unnecessary lines
 Widget scaffoldBody(

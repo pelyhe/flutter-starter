@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:formula/general/route.dart';
 import 'package:get/get.dart';
-import 'package:formula/localization/localization.dart';
+import 'package:project/general/route.dart';
+import 'package:project/localization/localization.dart';
 
 void main() {
   runApp(const MyApp());
